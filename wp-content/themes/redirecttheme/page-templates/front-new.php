@@ -5,7 +5,7 @@ Template Name: Front New
 get_header(); ?>
 
 <?php if ( get_field('headline') ) : ?>
-    <section class="front-hero">
+    <section class="front-hero test">
         <div class='grid-container'>
             <div class='grid-x grid-padding-x'>
                 <div class='small-12 large-8 cell'>
