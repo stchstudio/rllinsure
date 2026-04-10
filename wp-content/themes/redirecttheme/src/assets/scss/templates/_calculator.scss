@@ -325,10 +325,11 @@
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    color: rgba($white, 0.55);
+    color:white;
     font-weight: 600;
-    margin-bottom: 4px;
     text-align: center;
+    background: $dark;
+    padding-top: 25px;
   }
 
   .waiver-calc__revenue {
@@ -340,10 +341,8 @@
     line-height: 1.1;
     text-shadow: 0 2px 20px rgba($yellow, 0.25);
     transition: transform 0.25s ease;
-
-    &.bump {
-      transform: scale(1.04);
-    }
+    background: $dark;
+    padding-bottom: 25px;
   }
 
   .waiver-calc__result-line {
@@ -373,7 +372,7 @@
   .waiver-calc__rl-value {
     font-size: 18px;
     font-weight: 700;
-    color: $dark;
+    color: $purple;
     text-align: right;
   }
 
