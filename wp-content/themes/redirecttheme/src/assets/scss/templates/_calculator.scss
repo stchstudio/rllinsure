@@ -112,26 +112,28 @@
       margin-bottom: 8px;
     }
 
-    input[type="number"],
-    select {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1.5px solid darken($beige, 8%);
-      border-radius: 8px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 16px;
-      color: $blue-light;
-      font-weight: 600;
-      background: lighten($beige, 3%);
-      transition: border-color 0.2s, box-shadow 0.2s;
-      -moz-appearance: textfield;
+        input[type="number"],
+        select {
+        width: 100%;
+        height: 48px;
+        padding: 0 14px;
+        border: 1.5px solid darken($beige, 8%);
+        border-radius: 8px;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 16px;
+        line-height: 48px;
+        color: $blue-light;
+        font-weight: 600;
+        background: lighten($beige, 3%);
+        transition: border-color 0.2s, box-shadow 0.2s;
+        -moz-appearance: textfield;
 
-      &:focus {
-        outline: none;
-        border-color: $blue-light;
-        box-shadow: 0 0 0 3px rgba($blue-light, 0.12);
-      }
-    }
+        &:focus {
+            outline: none;
+            border-color: $blue-light;
+            box-shadow: 0 0 0 3px rgba($blue-light, 0.12);
+        }
+        }
 
     input[type="number"] {
       &::-webkit-inner-spin-button,
@@ -141,14 +143,15 @@
       }
     }
 
-    select {
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238C8F90' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 14px center;
-      padding-right: 36px;
-      cursor: pointer;
-    }
+        select {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238C8F90' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+        padding-right: 36px;
+        cursor: pointer;
+        line-height: normal;  // ← override for select specifically
+        }
   }
 
   .waiver-calc__field-row {
@@ -247,19 +250,20 @@
     cursor: pointer;
 
     &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background: $blue-light;
-      border: 3px solid $white;
-      box-shadow: 0 2px 8px rgba($blue-light, 0.35);
-      cursor: pointer;
-      transition: transform 0.15s;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: $blue-light;
+    border: 3px solid $white;
+    box-shadow: 0 2px 8px rgba($blue-light, 0.35);
+    cursor: pointer;
+    transition: transform 0.15s;
+    margin-top: -8px;  // ← centers 22px thumb on 6px track
 
-      &:hover {
+    &:hover {
         transform: scale(1.15);
-      }
+    }
     }
 
     &::-moz-range-thumb {
@@ -299,7 +303,7 @@
   // RESULTS PANEL
   // ═══════════════════════════════════════════════════════
   .waiver-calc__results {
-    background: $blue-dark;
+    background: $beige;
     padding: 40px 36px;
     display: flex;
     flex-direction: column;
@@ -347,7 +351,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 16px 0;
-    border-bottom: 1px solid rgba($white, 0.08);
+    border-bottom: 1px solid rgba($dark, 0.08);
 
     &:last-child {
       border-bottom: none;
@@ -356,20 +360,20 @@
 
   .waiver-calc__rl-label {
     font-size: 14px;
-    color: rgba($white, 0.7);
+    color: rgba($dark, 1);
     max-width: 180px;
   }
 
   .waiver-calc__rl-sublabel {
     font-size: 11px;
-    color: rgba($white, 0.35);
+    color: rgba($dark, 0.5);
     margin-top: 2px;
   }
 
   .waiver-calc__rl-value {
     font-size: 18px;
     font-weight: 700;
-    color: $white;
+    color: $dark;
     text-align: right;
   }
 

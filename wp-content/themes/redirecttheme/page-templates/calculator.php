@@ -149,7 +149,7 @@ get_header(); ?>
 
                 </div>
             </div>
-            <div class="small-12 cell">
+            <div class="small-12 large-8 large-offset-2 cell">
                 
                 <?php if ( have_rows('cta') ) : ?>
                     <div class="calculator__cta">
