@@ -107,7 +107,8 @@ get_header(); ?>
 
                     <!-- Billboard SVG (inline for JS text updates) -->
                     <div class="waiver-calc__billboard">
-                        <?php include( get_stylesheet_directory() . '/assets/images/billboard-results.svg' ); ?>
+
+                        <?php include( get_stylesheet_directory() . '/dist/assets/images/billboard-results.svg' ); ?>
                     </div>
 
                     <!-- Result lines -->
