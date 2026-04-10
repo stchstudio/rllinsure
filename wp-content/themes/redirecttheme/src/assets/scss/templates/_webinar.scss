@@ -1,0 +1,88 @@
+.page-template-webinar{
+    .site-header{
+        .login, .fire-navigation, .nav-overlay, .top-bar-right{
+            display: none;
+        }
+    }
+    .start-convo-fixed{
+        display: none !important;
+    }
+    .webinar{
+        background-image: linear-gradient( $beige 50%, #8B5BA3 50%);
+    }
+    .offer{
+        padding: 50px 0;
+        background: #8B5BA3;
+        position: relative;
+        overflow: visible;
+        @include breakpoint(large){
+            padding-bottom: 150px;
+        }
+        h5{
+            color: $yellow;
+            line-height: 1.2;
+            @include breakpoint(large){
+                font-size: 34px;
+            }
+        }
+        h6{
+            color: white;
+            font-weight: 600;
+        }
+        .button{
+            margin-top: 25px;
+        }
+        p{
+            a:not(.button){
+                color: white;
+                text-decoration: underline;
+                @include breakpoint(large){
+                    font-size: 20px;
+                }
+            }
+        }
+        .foreground{
+            position: absolute;
+            right: 40px;
+            bottom: -135px;
+            z-index: 2;
+            width: 220px;
+            @include breakpoint(small){
+                display: none;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                display: block;
+            }
+        }
+    }
+    &.page-id-907{
+        .offer{
+            .foreground{
+                right: auto;
+                left: 40px;
+                bottom: -165px;
+            }
+            .insurance-owners-gamble-webinar-schedule{
+                @include breakpoint(small){
+                    
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    font-size: 22px !important;
+                }
+            }
+        }
+    }
+    footer{
+        position: relative;
+        z-index: 1;
+        #menu-footer-primary, #menu-footer-secondary{
+            display: none;
+        }
+    }
+}

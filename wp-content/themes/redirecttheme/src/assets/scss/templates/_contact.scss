@@ -1,0 +1,94 @@
+.page-template-contact{
+    .start-convo-fixed{
+        display: none !important;
+    }
+    .headline{
+        p{
+            color: $blue-dark;
+            @include breakpoint(small){
+                
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                font-size: 26px;
+            }
+        }
+    }
+    .form{
+        form{
+            .gform_body{
+                input{
+                    @include breakpoint(small){
+                        
+                    }
+                    @include breakpoint(medium){
+                        height: 60px;
+                    }
+                    @include breakpoint(large){
+                        height: 60px;
+                    }
+                }
+                select{
+                    padding: 0 25px 0 15px;
+                    height: 60px;
+                    color: $dark;
+                    font-weight: 500;
+                    font-size: 20px;
+                    border: none;
+                    border: none;
+                    box-shadow: none;
+                    font-weight: 400;
+                }
+                input, textarea{
+                    padding: 20px;
+                    font-size: 20px;
+                    color: $dark;
+                    border: none;
+                    box-shadow: none;
+                    &::placeholder{
+                        font-size: 20px;
+                        color: $dark;
+                        @include breakpoint(small){
+                            
+                        }
+                        @include breakpoint(medium){
+                            
+                        }
+                        @include breakpoint(large){
+                            height: 60px;
+                        }
+                    }
+                }
+                .gfield--type-captcha{
+                    label{
+                        font-weight: 400;
+                        text-align: left;
+                        font-size: 14px;
+                    }
+                    .gfield_captcha_container{
+                        text-align: left;
+                    }
+                }
+            }
+            .gform_footer{
+                input[type=submit]{
+                    background: $green;
+                    border: solid 2px $green;
+                    color: $beige;
+                    border-radius: 0;
+                    &:hover{
+                        background: $beige;
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+    .contact{
+        h5{
+            color: $green;
+        }
+    }
+}

@@ -1,0 +1,138 @@
+.page-template-waiver{
+    .site-header, .page-header{
+        background: $yellow;
+    }
+    .waiver{
+        background: $beige;
+        overflow: visible;
+        img{
+            @include breakpoint(small){
+                margin-top: 25px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                margin-top: 0;
+                display: inline-block;
+                position: relative;
+            }
+        }
+        .download{
+            padding: 50px 0;
+            h4{
+                color: $purple;
+            }
+            a{
+                color: $blue-light;
+                font-weight: bold;
+            }
+        }
+    }
+    .main{
+        
+        @include breakpoint(small){
+            padding: 50px 0;;
+        }
+        @include breakpoint(medium){
+            
+        }
+        @include breakpoint(large){
+            padding: 100px 0 50px;
+        }
+        .subhead{
+            margin-bottom: 50px;
+            h3{
+                color: $blue-dark;
+            }
+        }
+        .implementation{
+            .block{
+                margin-bottom: 25px;
+                h6{
+                    color: $green;
+                }
+            }
+        }
+        .large-3{
+            h4{
+                color: $purple;
+                text-align: center;
+            }
+            .property-types{
+                padding-bottom: 25px;
+                margin-bottom: 25px;
+                border-bottom: solid 1px $dark;
+            }
+            .perils{
+                padding-bottom: 25px;
+                margin-bottom: 25px;
+                border-bottom: solid 1px $dark;
+                li{
+                    text-align: center;
+                    margin: 15px;
+                    display: inline-block;
+                    img{
+                        display: block;
+                        width: 75px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-bottom: 10px;
+                    }
+                    h6{
+                        display: block;
+                        font-size: 20px;
+                    }
+                }
+            }
+            .cherry{
+                h5{
+                    
+                }
+            }
+        }
+    }
+    .protect{
+        padding: 25px 0 150px;
+        .grid-x{
+            border: solid 1px $dark;
+            .call-to{
+                padding: 25px;
+                h6{
+                    margin-bottom: 0;
+                }
+            }
+            .large-3{
+                @include breakpoint(small){
+                    
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    text-align: right;
+                }
+            }
+            .link{
+               
+                @include breakpoint(small){
+                    padding: 0 25px 25px;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    padding: 25px;
+                }
+                display: block;
+                color: $blue-light;
+                font-weight: bold;
+            }
+        }
+
+    }
+
+}

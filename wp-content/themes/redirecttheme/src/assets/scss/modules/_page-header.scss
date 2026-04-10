@@ -1,0 +1,93 @@
+.page-header{
+    @include breakpoint(small){
+        
+    }
+    @include breakpoint(medium){
+        
+    }
+    @include breakpoint(large){
+        padding: 50px 0;
+    }
+    background: $beige;
+    position: relative;
+    .headline{
+        margin-bottom: 50px;
+    }
+    .quick-links{
+        @include breakpoint(small){
+            padding-bottom: 50px;
+        }
+        @include breakpoint(medium){
+            
+        }
+        @include breakpoint(large){
+            
+        }
+        .border-bottom{
+            border-bottom: solid 1px $dark;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+        }
+    }
+    .stats{
+        padding: 25px 0;
+        border-top: solid 1px $dark;
+        .stat{
+            display: inline-block;
+            margin-bottom: 25px;
+            @include breakpoint(small){
+                width: 100%;
+                padding: 0 40px;
+            }
+            @include breakpoint(medium){
+                width: 33%;
+            }
+            @include breakpoint(large){
+                
+            }
+        }
+    }
+    .large-3{
+        @include breakpoint(small){
+            
+        }
+        @include breakpoint(medium){
+            
+        }
+        @include breakpoint(large){
+            
+        }
+    }
+    .greeter{
+        bottom: 0;
+        text-align: center;
+        @include breakpoint(small){
+            margin-top: 25px;
+            padding: 0 25px;
+        }
+        @include breakpoint(medium){
+            
+        }
+        @include breakpoint(large){
+            position: absolute;
+           
+        }
+        @include breakpoint(xlarge){
+            right: 25px;
+            width: 350px;
+            padding: 0 10px;
+        }
+        .greeter-greeting{
+            h6{
+                font-size: 18px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+    h4{
+        color: $purple;
+    }
+}
+

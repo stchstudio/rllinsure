@@ -1,0 +1,272 @@
+.page-template-captive{
+    .captive-header{
+        position: relative;
+        background: $beige;
+        @include breakpoint(small){
+            
+        }
+        @include breakpoint(medium){
+            
+        }
+        @include breakpoint(large){
+            padding: 25px 0 250px;
+        }
+        .headline{
+            position: relative;
+            z-index: 4;
+            p{
+                max-width: 530px;
+                @include breakpoint(small){
+                    
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    font-size: 20px;
+                    max-width: 90%;
+                }
+                strong{
+                    color: $purple
+                }
+            }
+            .link{
+                margin-left: 20px;
+            }
+        }
+        .illustration{
+            bottom: 0;
+            z-index: 4;
+            @include breakpoint(small){
+                
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                width: 400px;
+                position: absolute;
+            }
+        }
+        .slant{
+            width: 100%;
+            bottom: -1px;
+            position: absolute;
+            &.green{
+                z-index: 1;
+            }
+            &.blue{
+                z-index: 3;
+            }
+        }
+    }
+    .intro{
+        background: $blue-dark;
+        padding: 50px 0;
+        color: $beige;
+    }
+    .learn-more{
+        background: $blue-dark;
+        padding-bottom: 100px;
+        .small-12{
+            padding-top: 50px;
+            border-top: solid 1px $beige;
+            h6{
+                color: $yellow;
+                font-weight: 600;
+            }
+        }
+        form{
+            position: relative;
+            z-index: 3;
+            input[type="text"], input[type="email"], input[type="tel"], input[type="url"]{
+                color: $blue-dark;
+                font-weight: 500;
+                font-size: 18px;
+                height: 60px;
+                padding-left: 15px;
+                &::placeholder{
+                    color: $blue-dark;
+                    font-weight: 500;
+                    font-size: 18px;
+                }
+            }
+            label{
+                color: $beige !important;
+               .gfield_required{
+                display: none !important;
+               } 
+            }
+            select{
+                padding: 0 25px 0 15px;
+                height: 60px;
+                color: $blue-dark;
+                font-weight: 500;
+                font-size: 18px;
+            }
+            .gfield--type-captcha{
+                label{
+                    font-weight: 400;
+                    text-align: left;
+                    font-size: 14px;
+                }
+                .gfield_captcha_container{
+                    text-align: left;
+                }
+            }
+        }
+        .gform_confirmation_message{
+            margin-top: 50px;
+            color: $beige;
+            font-size: 18px;
+        }
+    }
+    .about{
+        padding-bottom: 50px;
+        background: $green;
+        color: $beige;
+        overflow: visible;
+        ul{
+            margin-top: -45px;
+        }
+        .about__block{
+            display: inline-block;
+            @include breakpoint(small){
+                
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                width: 250px;
+                margin: 0 20px;
+                text-align: center;;
+            }
+        }
+    }
+
+    .one-sheet{
+        background: $beige;
+        overflow: visible;
+        img{
+
+            @include breakpoint(small){
+                margin-top: -50px;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                display: inline-block;
+                position: relative;
+            }
+        }
+        .download{
+            padding: 50px 0;
+            h4{
+                color: $purple;
+            }
+            a{
+                color: $blue-light;
+                font-weight: bold;
+            }
+        }
+    }
+    .renters{
+        padding: 100px 0 200px;
+        h3{
+            color: $blue-dark;
+            text-align: center;;
+            margin-bottom: 20px;
+        }
+        .renters__block{
+            padding: 0 25px;
+            p{
+                strong{
+                    color: $blue-light;
+                }
+            }
+            ul{
+                margin-left: 0;
+                list-style: none;
+                li{
+                    &::before{
+                        content: '✓';
+                        @include breakpoint(small){
+                            
+                        }
+                        @include breakpoint(medium){
+                            
+                        }
+                        @include breakpoint(large){
+                          position: relative;
+                          right: 15px;  
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .liability{
+        background: $beige;
+        overflow: visible;
+        position: relative;
+        .slant{
+            position: absolute;
+            
+            width: 100%;
+            top: -10vw;
+            @include breakpoint(small){
+                
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                
+            }
+        }
+        @include breakpoint(small){
+            padding: 50px 0;
+        }
+        @include breakpoint(medium){
+            
+        }
+        @include breakpoint(large){
+            padding: 50px 0 100px;
+        }
+        h4{
+            color: $dark;
+        }
+        .button{
+            margin-right: 15px;
+            background: $green;
+            border: solid 2px $green;
+            color: $beige;
+            &:hover{
+                background: $beige;
+                color: $green;
+            }
+        }
+        .character{
+            @include breakpoint(small){
+                margin-top: -150px;
+                margin-bottom: 50px;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                display: block;
+                position: absolute;
+                top: -150px;
+                right: 50px;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

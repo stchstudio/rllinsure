@@ -1,0 +1,153 @@
+.page-template-front-new{
+    .front-hero{
+        padding: 25px 0 0 0;
+        background: $beige;
+        overflow: visible;
+        .front-hero__headline{
+            position: relative;
+            z-index: 4;
+            @include breakpoint(small){
+                padding: 25px 0;
+            }
+            @include breakpoint(large){
+                padding: 50px 0 10px;;
+            }
+            .button{
+                background: $yellow;
+                border: solid 2px $yellow;
+                color: $blue-dark;
+                &:hover{
+                    background: $blue-dark;
+                    border: solid 2px $blue-dark;
+                    color: $yellow;
+                }
+            }
+        }
+        .front-hero__city-animation{
+            margin-bottom: -20px;
+            position: relative;
+            z-index: 2;
+            svg{
+                @include breakpoint(large){
+                    margin-top: -200px;
+                }
+            }
+        }
+    }
+    .front-greeter{
+        background: $blue-light;
+        position: relative;
+        z-index: 1;
+        .front-greeter__trusted-by, .front-greeter__slick-wrapper{
+            @include breakpoint(small){
+                padding: 50px 0 50px;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                padding: 50px 0 125px;
+            }
+            .front-greeter__slick{
+                .slick-prev, .slick-next{
+                    width: 25px;
+                    height: 25px;
+                    background: $blue-light;
+                    opacity: 1;
+                    z-index: 10;
+                    // position: relative;
+                    @include breakpoint(small){
+                        
+                    }
+                    @include breakpoint(medium){
+                        
+                    }
+                    @include breakpoint(large){
+                        
+                    }
+                    &:before{
+                        font-size: 0;
+                    }
+                    .fa{
+                        width: 25px;
+                        height: 25px;
+                        color: $dark;
+                        font-size: 25px;
+                        path{
+                            fill: $beige;
+                        }
+                    }
+                }
+                .slick-prev{
+                    @include breakpoint(small){
+                        left: 5px;
+                    }
+                    @include breakpoint(medium){
+                        
+                    }
+                    @include breakpoint(large){
+                        left: -20px;
+                    }
+                }
+                .slick-next{
+                    @include breakpoint(small){
+                        right: 5px;
+                    }
+                    @include breakpoint(medium){
+                        
+                    }
+                    @include breakpoint(large){
+                        right: -20px;
+                    }
+                }
+                .slick-slide{
+                    
+                    @include breakpoint(small){
+                        padding: 25px 40px;
+                    }
+                    @include breakpoint(medium){
+                        
+                    }
+                    @include breakpoint(large){
+                        
+                    }
+                }
+                .front-greeter__slick__block{
+                    h4{
+                        color: $yellow;
+                    }
+                    img{
+                        margin: 15px;
+                        display: inline-block !important;
+                    }
+                    h5{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .for{
+        .waiver-animation{
+            @include breakpoint(small){
+                margin-top: -150px;
+                margin-bottom: 50px;
+                width: 90%;
+                max-width: 530px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                display: block;
+                position: absolute;
+                top: -150px;
+                right: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

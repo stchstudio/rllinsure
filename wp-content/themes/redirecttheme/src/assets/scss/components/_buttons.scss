@@ -1,0 +1,13 @@
+.button{
+  background: $green;
+  border: solid 2px $green;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 30px;
+  text-decoration: none !important;
+  &:hover, &:focus{
+    background: white;
+    color: $green;
+  }
+}

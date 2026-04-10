@@ -1,0 +1,48 @@
+.single-video{
+    .top-bar-right, .fire-navigation, .start-convo-fixed{
+        display: none !important;
+    }
+    .pseudo-header{
+        position: relative;
+        background: $beige;
+        height: 10vw;
+        .slant{
+            width: 100%;
+            bottom: -1px;
+            position: absolute;
+            &.green{
+                z-index: 1;
+            }
+            &.blue{
+                z-index: 3;
+            }
+        }
+    }
+    .video{
+        padding: 25px 0 50px;
+        background: $blue-dark;
+        position: relative;
+        .responsive-embed{
+            position: relative;
+            z-index: 2;
+        }
+        .pseudo-footer{
+            background: $beige;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: 1;
+            @include breakpoint(small){
+                height: 100px;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                height: 150px;
+            }
+        }
+    }
+}
+
+

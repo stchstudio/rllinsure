@@ -1,0 +1,76 @@
+.page-template-resource-center{
+    background: $beige;
+    .page-header{
+        .headline{
+            p{
+                color: $blue-dark;
+                @include breakpoint(small){
+                    font-size: 24px;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    font-size: 26px;
+                }
+            }
+        }
+
+    }
+    .resource-center{
+        background: $beige;
+        padding-bottom: 100px;
+        .resources{
+            
+            @include breakpoint(small){
+                
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                column-count: 2;
+            }
+            .resource{
+                background: white;
+                margin-bottom: 25px;
+                padding: 50px 25px;
+                break-inside: avoid-column;
+                -webkit-column-break-inside: avoid; /* Chrome, Safari */
+                page-break-inside: avoid;           /* Theoretically FF 20+ */
+                break-inside: avoid-column;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                h3{
+                    color: $blue-dark;
+                }
+                em{ 
+                    display: inline-block;
+                    margin-top: 25px;
+                }
+                .link{
+                    font-family: 'Urbanist';
+                    @include breakpoint(small){
+                        
+                    }
+                    @include breakpoint(medium){
+                        
+                    }
+                    @include breakpoint(large){
+                        font-size: 28px;
+                    }
+                }
+                .button{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.page-template-videos{
+    .videos{
+        .grid-x{
+            justify-content: center;;
+        }
+    }
+}

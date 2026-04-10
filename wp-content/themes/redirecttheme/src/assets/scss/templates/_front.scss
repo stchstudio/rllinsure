@@ -1,0 +1,343 @@
+.page-template-front, .page-template-front-new{
+    .front-header, .front-greeter{
+        position: relative;
+        background: $beige;
+        @include breakpoint(small){
+            
+        }
+        @include breakpoint(medium){
+            
+        }
+        @include breakpoint(large){
+            padding: 25px 0 130px;
+        }
+        .headline{
+            position: relative;
+            z-index: 4;
+            p{
+                max-width: 530px;
+            }
+            .link{
+                margin-left: 20px;
+            }
+            @include breakpoint(small){
+                
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                top: -35px
+            }
+        }
+        .greeter-image{
+            bottom: 0;
+            z-index: 2;
+            @include breakpoint(small){
+                
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                width: 400px;
+                position: absolute;
+            }
+        }
+        .slant{
+            width: 100%;
+            bottom: -1px;
+            position: absolute;
+            &.green{
+                z-index: 1;
+            }
+            &.blue{
+                z-index: 3;
+            }
+        }
+    }
+    .lead-form{
+        background: $dark;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        
+        z-index: 10;
+        @include breakpoint(small){
+            padding: 50px 0 100px;
+        }
+        @include breakpoint(medium){
+            
+        }
+        @include breakpoint(large){
+            padding: 25px 0;
+        }
+        .gform_wrapper{
+            .gform_heading{
+                h2{
+                    line-height: 1.1;
+                    font-family: 'Urbanist';
+                    font-weight: 600;
+                    color: $yellow;
+                    @include breakpoint(small){
+                        font-size: 18px;
+                        max-width: 300px;
+                    }
+                    @include breakpoint(medium){
+                        font-size: 20px;
+                        max-width: 100%;
+                    }
+                    @include breakpoint(large){
+                        font-size: 20px;
+                    }
+                }
+            }
+            .gform_body{
+                input[type=text], input[type=email], input[type=tel]{
+                    @include breakpoint(small){
+                        
+                    }
+                    @include breakpoint(medium){
+                        
+                    }
+                    @include breakpoint(large){
+                        height: 50px;
+                        padding-left: 25px;
+                    }
+                    &::placeholder{
+                        color: $dark;
+                    }
+                }
+                input[type=submit]{
+                    padding: 0.85em 1em !important;
+                    border: none !important;
+                    @include breakpoint(small){
+                        font-size: 16px;
+                    }
+                    @include breakpoint(medium){
+                        font-size: 16px;
+                    }
+                    @include breakpoint(large){
+                        height: 50px;
+                    }
+                }
+            }
+            .gform_footer{
+                display: none;
+            }
+        }
+        .gform_confirmation_message{
+            padding: 25px 0;
+            color: $yellow !important;
+            font-family: 'Urbanist';
+            font-weight: 600;
+        }
+    }
+    .intro{
+        background: $blue-dark;
+        padding-bottom: 50px;
+        color: $beige;
+        overflow: visible;
+        z-index: 5;
+        .large-5{
+            position: relative;
+            .greeting{
+                @include breakpoint(small){
+                    margin-bottom: 50px;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    margin-bottom: 25px;
+                    max-width: 500px;
+                }
+                .greeter-wave{
+                    margin-bottom: 15px;
+                    img{
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        
+                        @include breakpoint(small){
+                            width: 50px;
+                        }
+                        @include breakpoint(medium){
+                            
+                        }
+                        @include breakpoint(large){
+                            width: 75px;
+                        }
+                    }
+                }
+                .greeter-greeting{
+                    @include breakpoint(small){
+                        text-align: center;
+                        max-width: 300px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    @include breakpoint(medium){
+                        max-width: 100%;
+                    }
+                    @include breakpoint(large){
+                        text-align: left;
+                    }
+                    p{
+                        font-weight: 400;
+                        line-height: 1.4;
+                        strong{
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+            .video-container{
+                padding: 25px;
+                background: $beige;;
+                @include breakpoint(small){
+                    margin-bottom: 50px;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    position: absolute;
+                    z-index: 2;
+                    margin-bottom: 0;
+                    width: 93%;
+                }
+                h5{
+                    color: $blue-dark;
+                    @include breakpoint(small){
+                        
+                    }
+                    @include breakpoint(medium){
+                        
+                    }
+                    @include breakpoint(large){
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+        .large-7{
+            p{
+                @include breakpoint(small){
+                    font-size: 22px;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    font-size: 26px;
+                }
+            }
+            .button{
+                background: $green;
+                border: solid 2px $green;
+                color: $beige;
+                &:hover{
+                    background: $blue-dark;
+                    color: $green;
+                }
+            }
+        }
+    }
+    .why-container{
+       
+        background: white;
+        @include breakpoint(small){
+            padding: 100px 0 200px;
+        }
+        @include breakpoint(medium){
+            
+        }
+        @include breakpoint(large){
+            padding: 150px 0 200px;
+        }
+        h3{
+            text-align: center;
+            color: $blue-dark;
+            margin-bottom: 15px;
+        }
+
+        .why{
+            li{
+                display: inline-block;
+                
+                padding: 25px;
+                text-align: center;
+                @include breakpoint(small){
+                    width: 100%;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    width: 33%;
+                }
+
+            }
+        }
+    }
+    .for{
+        background: $beige;
+        overflow: visible;
+        position: relative;
+        .slant{
+            position: absolute;
+            
+            width: 100%;
+            top: -10vw;
+            @include breakpoint(small){
+                
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                
+            }
+        }
+        @include breakpoint(small){
+            padding: 50px 0;
+        }
+        @include breakpoint(medium){
+            
+        }
+        @include breakpoint(large){
+            padding: 50px 0 100px;
+        }
+        h4{
+            color: $dark;
+        }
+        .button{
+            margin-right: 15px;
+            background: $green;
+            border: solid 2px $green;
+            color: $beige;
+            &:hover{
+                background: $beige;
+                color: $green;
+            }
+        }
+        .character{
+            @include breakpoint(small){
+                margin-top: -150px;
+                margin-bottom: 50px;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                display: block;
+                position: absolute;
+                top: -150px;
+                right: 0;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

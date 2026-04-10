@@ -1,0 +1,451 @@
+.page-template-for{
+    .page-header{
+        .large-3{
+            @include breakpoint(small){
+                
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                text-align: right;
+            }
+            .link{
+                display: block;
+            }
+        }
+    }
+    .intro{
+        padding: 50px 0;
+        background: $blue-dark;
+        color: $beige;
+        margin-bottom: 100px;
+        position: relative;
+        overflow: visible;
+        p{
+            @include breakpoint(small){
+                // font-size: 22px;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+            // font-size: 26px;
+            }
+        }
+        .slant{
+            position: absolute;
+            width: 100%;
+            bottom: -7vw;
+        }
+        .video-container{
+            padding: 25px;
+            background: white;
+            @include breakpoint(small){
+                margin-top: 50px;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                margin-top: -100px;
+            }
+            h5{
+                color: $blue-dark;
+                @include breakpoint(small){
+                    
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .stats-container{
+        padding: 50px 0;
+        h6{
+            text-align: center;
+            color: $gray;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .stats{
+            li{
+                display: inline-block;
+                width: 300px;
+                margin: 25px;
+                text-align: center;
+                h2{
+                    color: $green;
+                    @include breakpoint(small){
+                        font-size: 70px;
+                    }
+                    @include breakpoint(medium){
+                        font-size: 80px;
+                    }
+                    @include breakpoint(large){
+                        font-size: 100px;
+                    }
+                }
+                p{
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+    .solution{
+        padding: 50px 0;
+        .border{
+            height: 1px;
+            border-bottom: solid 1px $gray;
+            margin-bottom: 100px;
+        }
+        h6{
+            color: $gray;;
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+        .large-4{
+            margin-bottom: 50px;
+        }
+    }
+    .downloads{
+        background: $yellow;
+        padding: 25px 0;
+        h6{
+            margin-top: 25px;
+        }
+        .align-right{
+            @include breakpoint(small){
+                justify-content: flex-start;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                justify-content: flex-end;
+            }
+        }
+    }
+    .benefits{
+        padding: 100px 0;
+        background: $beige;
+        h3{
+            color: $purple;
+        }
+        .benefits-slick{
+            .slick-prev, .slick-next{
+                width: 25px;
+                height: 25px;
+                background: $beige;
+                opacity: 1;
+                z-index: 10;
+                // position: relative;
+                @include breakpoint(small){
+                    
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    
+                }
+                &:before{
+                    font-size: 0;
+                }
+                .fa{
+                    width: 25px;
+                    height: 25px;
+                    color: $dark;
+                    font-size: 25px;
+                    path{
+                        fill: white;
+                    }
+                }
+            }
+            .slick-prev{
+                @include breakpoint(small){
+                    left: 5px;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    left: -20px;
+                }
+            }
+            .slick-next{
+                @include breakpoint(small){
+                    right: 5px;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    right: -20px;
+                }
+            }
+            .slick-slide{
+                
+                @include breakpoint(small){
+                    padding: 25px 40px;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    
+                }
+            }
+        }
+    }
+    .lead-form{
+        background: $dark;
+        width: 100%;
+        padding: 50px 0;
+        .gform_wrapper{
+            .gform_heading{
+                margin-bottom: 25px;
+                h2{
+                    line-height: 1.1;
+                    font-family: 'Urbanist';
+                    font-weight: 600;
+                    color: $yellow;
+                    text-align: center;
+                    @include breakpoint(small){
+                        font-size: 20px;
+                        max-width: 300px;
+                    }
+                    @include breakpoint(medium){
+                        font-size: 24px;
+                        max-width: 100%;
+                    }
+                    @include breakpoint(large){
+                        font-size: 30px;
+                    }
+                }
+            }
+            .gform_body{
+                #field_2_17{
+                    text-align: center;
+                    label{
+                        color: white;
+                        text-transform: uppercase;;
+                    }
+                }
+                input[type=text], input[type=email], input[type=tel], select{
+                    @include breakpoint(small){
+                        
+                    }
+                    @include breakpoint(medium){
+                        
+                    }
+                    @include breakpoint(large){
+                        height: 50px;
+                        padding-left: 25px;
+                    }
+                    &::placeholder{
+                        color: $dark;
+                    }
+                }
+                select{
+                    padding-right: 25px;
+                }
+                #field_submit{
+                    display: inline-block;
+                }
+                input[type=submit]{
+                    padding: 0.85em 1em !important;
+                    border: none !important;
+                    @include breakpoint(small){
+                        font-size: 16px;
+                    }
+                    @include breakpoint(medium){
+                        font-size: 16px;
+                    }
+                    @include breakpoint(large){
+                        height: 50px;
+                    }
+                }
+                .gfield_description{
+                    color: $yellow;
+                    font-family: 'Urbanist';
+                    font-size: 14px;
+                }
+                .validation_message{
+                    color: #c02b0a !important;
+                }
+                .gfield_required_text{
+                    display: none;
+                }
+                .gfield--type-captcha{
+                    label{
+                        font-weight: 400;
+                        text-align: left;
+                        font-size: 14px;
+                    }
+                    .gfield_captcha_container{
+                        text-align: left;
+                    }
+                }
+            }
+            .gform_footer{
+                // display: none;
+            }
+        }
+        .gform_confirmation_message{
+            padding: 25px 0;
+            color: $yellow !important;
+            font-family: 'Urbanist';
+            font-weight: 600;
+        }
+    }
+    #leadModal1{
+        background: $blue-dark;
+        padding: 0;
+        max-width: 1000px !important;
+        width: 90%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+        .close-button{
+            color: white;
+        }
+        .reveal__form__headline{
+            text-align: center;
+            padding-top: 50px;
+            @include breakpoint(small){
+                padding: 15px;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                padding: 50px;
+            }
+            h2{
+                color: $yellow;
+            }
+            p{
+                color: white;
+                font-weight: bold;
+                @include breakpoint(large){
+                    font-size: 18px;
+                }
+            }
+        }
+        #modal-form-container{
+            @include breakpoint(small){
+                
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                margin-top: -100px;
+            }
+        }
+        .gform_wrapper{
+            display: block !important;
+            @include breakpoint(small){
+                padding: 15px;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                padding: 50px;
+            }
+            .gform_body{
+                #field_12_17{
+                    text-align: center;
+                    label{
+                        color: white;
+                        text-transform: uppercase;;
+                    }
+                }
+                input[type=text], input[type=email], input[type=tel], select{
+                    @include breakpoint(small){
+                        
+                    }
+                    @include breakpoint(medium){
+                        
+                    }
+                    @include breakpoint(large){
+                        height: 50px;
+                        padding-left: 25px;
+                    }
+                    &::placeholder{
+                        color: $dark;
+                    }
+                }
+                select{
+                    padding-right: 25px;
+                }
+                #field_submit{
+                    display: inline-block;
+                }
+                input[type=submit]{
+                    padding: 0.85em 1em !important;
+                    border: none !important;
+                    @include breakpoint(small){
+                        font-size: 16px;
+                    }
+                    @include breakpoint(medium){
+                        font-size: 16px;
+                    }
+                    @include breakpoint(large){
+                        height: 50px;
+                    }
+                }
+                .gfield_description{
+                    color: $yellow;
+                    font-family: 'Urbanist';
+                    font-size: 14px;
+                }
+                .validation_message{
+                    color: #c02b0a !important;
+                }
+                .gfield_required_text{
+                    display: none;
+                }
+                .gfield--type-captcha{
+                    label{
+                        font-weight: 400;
+                        text-align: left;
+                        font-size: 14px;
+                    }
+                    .gfield_captcha_container{
+                        text-align: left;
+                    }
+                }
+            }
+            .gform_footer{
+                // display: none;
+            }
+        }
+        .gform_confirmation_message{
+            padding: 25px 0;
+            color: $yellow !important;
+            font-family: 'Urbanist';
+            font-weight: 600;
+            text-align: center;
+            @include breakpoint(small){
+                padding: 50px;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                padding: 100px;
+            }
+        }
+    }
+}

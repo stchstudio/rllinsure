@@ -1,0 +1,41 @@
+.page-template-about{
+    .page-header{
+        @include breakpoint(small){
+            
+        }
+        @include breakpoint(medium){
+            
+        }
+        @include breakpoint(large){
+            min-height: 550px;
+        }
+    }
+    .page-header{
+        .headline{
+            p{
+                color: $blue-dark;
+                @include breakpoint(small){
+                    font-size: 24px;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    font-size: 26px;
+                }
+            }
+        }
+
+    }
+    .main{
+        padding: 50px 0;
+        .rating{
+            h3{
+                color: $green;
+            }
+            p{
+                margin-bottom: 35px;
+            }
+        }
+    }
+}

@@ -1,0 +1,312 @@
+@font-face {
+	font-family: 'PPEditorialNew-Ultrabold';
+	src: url('../fonts/PPEditorial/PPEditorialNew-UltraboldItalic/PPEditorialNew-Ultrabold.woff2') format('woff2'), 
+        url('../fonts/PPEditorial/PPEditorialNew-UltraboldItalic/PPEditorialNew-Ultrabold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PPEditorialNew-UltraboldItalic';
+	src: url('../fonts/PPEditorial/PPEditorialNew-UltraboldItalic/PPEditorialNew-UltraboldItalic.woff2') format('woff2'),
+        url('../fonts/PPEditorial/PPEditorialNew-UltraboldItalic/PPEditorialNew-UltraboldItalic.woff') format('woff');
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'PPEditorialNew-Ultralight';
+	src: url('../fonts/PPEditorial/PPEditorialNew-Ultralight/PPEditorialNew-Ultralight.woff2') format('woff2'),
+        url('../fonts/PPEditorial/PPEditorialNew-Ultralight/PPEditorialNew-Ultralight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'PPEditorialNew-UltralightItalic';
+	src: url('../fonts/PPEditorial/PPEditorialNew-Ultralight/PPEditorialNew-UltralightItalic.woff2') format('woff2'),
+        url('../fonts/PPEditorial/PPEditorialNew-Ultralight/PPEditorialNew-UltralightItalic.woff') format('woff');
+	font-weight: 200;
+	font-style: italic;
+}
+
+
+sup{
+    font-size: 60%;
+    line-height: 0;
+    position: relative;
+    vertical-align: middle;
+}
+
+h1{
+    font-family: 'PPEditorialNew-Ultralight';
+    line-height: 1;
+    @include breakpoint(small){
+        font-size: 60px;
+    }
+    @include breakpoint(medium){
+        font-size: 80px;
+    }
+    @include breakpoint(large){
+        font-size: 100px;
+    }
+}
+h2{
+    font-family: 'PPEditorialNew-Ultralight';
+    line-height: 1;
+    @include breakpoint(small){
+        font-size: 50px;
+    }
+    @include breakpoint(medium){
+        font-size: 70px;
+    }
+    @include breakpoint(large){
+        font-size: 80px;
+    }
+}
+h3{
+    font-family: 'PPEditorialNew-Ultralight';
+    line-height: 1.1;
+    @include breakpoint(small){
+        font-size: 40px;
+    }
+    @include breakpoint(medium){
+        font-size: 50px;
+    }
+    @include breakpoint(large){
+        font-size: 60px;
+    }
+}
+h4{
+    font-family: 'PPEditorialNew-Ultralight';
+    line-height: 1.4;
+    @include breakpoint(small){
+        font-size: 28px;
+    }
+    @include breakpoint(medium){
+        font-size: 30px;
+    }
+    @include breakpoint(large){
+        font-size: 34px;
+    }
+}
+h5{
+    line-height: 1.7;
+    font-family: 'Urbanist';
+    font-weight: 600;
+    @include breakpoint(small){
+        font-size: 20px;
+    }
+    @include breakpoint(medium){
+        font-size: 24px;
+    }
+    @include breakpoint(large){
+        font-size: 26px;
+    }
+}
+h6{
+    line-height: 1.1;
+    font-family: 'Urbanist';
+    font-weight: 900;
+    @include breakpoint(small){
+        font-size: 18px;
+    }
+    @include breakpoint(medium){
+        font-size: 20px;
+    }
+    @include breakpoint(large){
+        font-size: 24px;
+    }
+}
+
+a.link{
+    color: $blue-light;
+    font-weight: bold;
+    font-family: 'Urbanist';
+    @include breakpoint(small){
+        font-size: 18px;
+    }
+    @include breakpoint(medium){
+   
+    }
+    @include breakpoint(large){
+        font-size: 20px;
+    }
+}
+a.arrow{
+    color: $blue-light;
+    font-weight: bold;
+    font-family: 'Urbanist';
+    @include breakpoint(small){
+        font-size: 18px;
+    }
+    @include breakpoint(medium){
+   
+    }
+    @include breakpoint(large){
+        font-size: 20px;
+    }
+    &:after{
+        content: '';
+        transition: all .25s ease-in-out;
+        width: 40px;
+        height: 12px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20.558' height='9.315' viewBox='0 0 20.558 9.315'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='Rectangle_14' data-name='Rectangle 14' width='20.558' height='9.315' transform='translate(0 0)' fill='%2307819a'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Group_180' data-name='Group 180' transform='translate(0 0)'%3E%3Cg id='Group_12' data-name='Group 12' transform='translate(0 0.001)' clip-path='url(%23clip-path)'%3E%3Cpath id='Path_11' data-name='Path 11' d='M20.1,3.662,15.109.256a1.073,1.073,0,0,0-1.765.82V2.53H.643A.643.643,0,0,0,0,3.173v2.97a.643.643,0,0,0,.643.643h12.7V8.24a1.073,1.073,0,0,0,1.765.82L20.1,5.654a1.3,1.3,0,0,0,0-1.991' transform='translate(0 0)' fill='%2307819a'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        position: relative;
+        left: 10px;
+    }
+    &:hover, &:focus{
+        &:after{
+            content: '';
+            left: 30px;
+        }
+    }
+
+}
+.back{
+    a{
+        color: $blue-light;
+        font-weight: bold;
+        font-family: 'Urbanist';
+        @include breakpoint(small){
+            font-size: 20px;
+        }
+        @include breakpoint(medium){
+       
+        }
+        @include breakpoint(large){
+            font-size: 20px;
+        }
+        &:before{
+            content: '';
+            transition: all .25s ease-in-out;
+            width: 40px;
+            height: 12px;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20.558' height='9.315' viewBox='0 0 20.558 9.315'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='Rectangle_14' data-name='Rectangle 14' width='20.558' height='9.315' transform='translate(0 0)' fill='%2307819a'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Group_180' data-name='Group 180' transform='translate(0 0)'%3E%3Cg id='Group_12' data-name='Group 12' transform='translate(0 0.001)' clip-path='url(%23clip-path)'%3E%3Cpath id='Path_11' data-name='Path 11' d='M20.1,3.662,15.109.256a1.073,1.073,0,0,0-1.765.82V2.53H.643A.643.643,0,0,0,0,3.173v2.97a.643.643,0,0,0,.643.643h12.7V8.24a1.073,1.073,0,0,0,1.765.82L20.1,5.654a1.3,1.3,0,0,0,0-1.991' transform='translate(0 0)' fill='%2307819a'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            position: relative;
+            right: 10px;
+            transform: rotate(180deg)
+        }
+        &:hover, &:focus{
+            &:after{
+                content: '';
+                right: 30px;
+            }
+        }
+    
+    }
+}
+a.arrow.back{
+    color: $blue-light;
+    font-weight: bold;
+    font-family: 'Urbanist';
+    @include breakpoint(small){
+        font-size: 18px;
+    }
+    @include breakpoint(medium){
+   
+    }
+    @include breakpoint(large){
+        font-size: 20px;
+    }
+    &:before{
+        content: '';
+        transition: all .25s ease-in-out;
+        width: 40px;
+        height: 12px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20.558' height='9.315' viewBox='0 0 20.558 9.315'%3E%3Cdefs%3E%3CclipPath id='clip-path'%3E%3Crect id='Rectangle_14' data-name='Rectangle 14' width='20.558' height='9.315' transform='translate(0 0)' fill='%2307819a'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg id='Group_180' data-name='Group 180' transform='translate(0 0)'%3E%3Cg id='Group_12' data-name='Group 12' transform='translate(0 0.001)' clip-path='url(%23clip-path)'%3E%3Cpath id='Path_11' data-name='Path 11' d='M20.1,3.662,15.109.256a1.073,1.073,0,0,0-1.765.82V2.53H.643A.643.643,0,0,0,0,3.173v2.97a.643.643,0,0,0,.643.643h12.7V8.24a1.073,1.073,0,0,0,1.765.82L20.1,5.654a1.3,1.3,0,0,0,0-1.991' transform='translate(0 0)' fill='%2307819a'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        position: relative;
+        right: 10px;
+        transform: rotate(180deg)
+    }
+    &:hover, &:focus{
+        &:after{
+            content: '';
+            right: 30px;
+        }
+    }
+
+}
+
+p, ul, li, p a, input, ol {
+    
+    line-height: 1.8;
+    font-family: 'Urbanist';
+    font-weight: 600;
+    @include breakpoint(small){
+        font-size: 16px;
+    }
+    @include breakpoint(medium){
+        
+    }
+    @include breakpoint(large){
+        font-size: 18px;
+    }
+}
+p a, li a{
+    @include breakpoint(small){
+        
+    }
+    @include breakpoint(medium){
+   
+    }
+    @include breakpoint(large){
+        
+    }
+    &:hover{
+        
+    }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   
+    @include breakpoint(small){
+        
+    }
+    @include breakpoint(medium){
+   
+    }
+    @include breakpoint(large){
+        
+    }
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+   
+    @include breakpoint(small){
+        
+    }
+    @include breakpoint(medium){
+   
+    }
+    @include breakpoint(large){
+        
+    }
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+   
+    @include breakpoint(small){
+        
+    }
+    @include breakpoint(medium){
+   
+    }
+    @include breakpoint(large){
+        
+    }
+  }
+  :-moz-placeholder { /* Firefox 18- */
+
+    @include breakpoint(small){
+        
+    }
+    @include breakpoint(medium){
+   
+    }
+    @include breakpoint(large){
+       
+    }
+  }

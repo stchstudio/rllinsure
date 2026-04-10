@@ -1,0 +1,200 @@
+.page-template-team, .page-template-team-new{
+    .page-header{
+        .headline{
+            p{
+                color: $blue-dark;
+                @include breakpoint(small){
+                    font-size: 24px;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    font-size: 26px;
+                }
+            }
+        }
+
+    }
+    .team{
+        padding-bottom: 100px;
+        padding-top: 12px;
+        background: $beige;
+        h3{
+            color: $green;
+        }
+        .team-member{
+            margin-bottom: 25px;
+            position: relative;
+            a.wrap{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                z-index: 2;
+            }
+            .team-member-headshot{
+                img{
+                    width: 100%;
+                }
+            }
+            .team-member-title{
+                background: white;
+                padding: 15px;
+                h5{
+                    line-height: 1.2;
+                    margin-bottom: 5px;
+                    color: $blue-dark;
+                }
+                p{
+                    margin-bottom: 0;
+                }
+                .team-member-link{
+                    padding: 15px 0 5px;
+                }
+            }
+        }
+    }
+}
+
+
+.page-template-team-new{
+    .team{
+        .grid-x {
+            display: flex;
+            flex-wrap: wrap;
+            
+            // This ensures all children (cells) stretch equally in height
+            > .cell {
+                display: flex;
+            }
+        }
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto; // stretch to fill
+        }
+        .team-member-title {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+          
+            .team-member-link {
+              margin-top: auto; // pushes link to bottom
+            }
+          }
+
+        &.the-president{
+            .team__section-title{
+                h3{
+                    color: $purple;
+                }
+            }
+        }
+        &.the-directors{
+            .team__section-title{
+                h3{
+                    color: $green;
+                }
+            }
+        }
+        &.regional-sales-directors{
+            .team__section-title{
+                h3{
+                    color: $blue-dark;
+                }
+            }
+        }
+        &.account-managers-and-support-team{
+            .team__section-title{
+                h3{
+                    color: $blue-light;
+                }
+            }
+        }
+
+    }
+    .team-member{
+        .team-member-headshot{
+            position: relative;
+            img{
+                width: 100%;
+                // transition: all .6s ease-in-out;
+                &.waving{
+                    opacity: 0;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+        }
+        &:hover{
+            .team-member-headshot{
+                img{
+                    &.static{
+                        opacity: 0;
+                    }
+                    &.waving{
+                        opacity: 1;
+                    }
+                }
+            }
+            .team-member-link{
+
+                a.arrow{
+                    &:after{
+                        content: '';
+                        left: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.single-team{
+    .team-header{
+        background: $beige;
+        @include breakpoint(small){
+            height: 300px;
+        }
+        @include breakpoint(medium){
+            
+        }
+        @include breakpoint(large){
+            height: 300px;
+        }
+    }
+    .team-member{
+        margin-top: -250px;
+        padding-bottom: 100px;
+        h1{
+            color: $green;
+        }
+        h5{
+            color: $blue-dark;
+        }
+        .headshot{
+            margin-bottom: 25px;
+        }
+        .contact{
+            padding: 25px 0;
+            margin-bottom: 25px;
+            border-bottom: solid 1px $dark;
+        }
+        .title{
+            @include breakpoint(small){
+                margin-bottom: 25px;
+            }
+            @include breakpoint(medium){
+                
+            }
+            @include breakpoint(large){
+                margin-bottom: 100px;
+            }
+        }
+    }
+}
