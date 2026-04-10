@@ -95,7 +95,7 @@ get_header(); ?>
                         </div>
 
                         <!-- Claims Paid input -->
-                        <div class="waiver-calc__field">
+                        <div class="waiver-calc__field hide">
                             <label for="calcClaimsPaid">Claims Paid (Annual) <span class="waiver-calc__tip" data-tip="Annual claims paid out.">?</span></label>
                             <input type="number" id="calcClaimsPaid" value="10000" min="0" step="100">
                         </div>

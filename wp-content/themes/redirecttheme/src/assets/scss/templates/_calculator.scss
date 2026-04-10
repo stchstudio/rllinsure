@@ -81,11 +81,11 @@
   // ═══════════════════════════════════════════════════════
   .waiver-calc__inputs {
     background: $beige;
-    padding: 40px 36px;
-    border: 1px solid darken($beige, 8%);
+    padding: 25px;
+    border: 1px solid $dark;
 
     @media (max-width: 500px) {
-      padding: 28px 20px;
+      padding: 20px;
     }
   }
 
@@ -93,7 +93,7 @@
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 1.8px;
-    color: $gray;
+    color: $dark;
     font-weight: 600;
     margin-bottom: 28px;
   }
@@ -293,9 +293,9 @@
   }
 
   .waiver-calc__derived-value {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
-    color: $blue-light;
+    color: $purple;
   }
 
 
