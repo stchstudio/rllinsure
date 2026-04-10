@@ -14,6 +14,7 @@ get_header(); ?>
                         <?php echo get_field('headline'); ?>
                     </div>        
                 <?php endif; ?>
+
                 <div class="calculator__input">
 
                     <!-- Calculator Inputs -->
@@ -147,6 +148,36 @@ get_header(); ?>
 
 
                 </div>
+            </div>
+            <div class="small-12 cell">
+                
+                <?php if ( have_rows('cta') ) : ?>
+                    <div class="calculator__cta">
+                        <?php while( have_rows('cta') ) : the_row(); ?>
+                            <?php if ( get_sub_field('title') ) : ?>
+                                <div class="calculator__cta-title">
+                                    <?php echo get_sub_field('title'); ?>
+                                </div>
+                            <?php endif; ?>
+
+                            <div class="calculator__cta-actions">
+                                <?php $button = get_sub_field('button'); ?>
+                                <?php if( $button ): ?>
+                                    <a class="calculator__cta-btn" href="<?php echo esc_url($button['url']); ?>" target="<?php echo esc_attr($button['target'] ? $button['target'] : '_self'); ?>"><?php echo esc_html($button['title']); ?></a>
+                                <?php endif; ?>
+
+                                <?php if ( get_sub_field('phone') ) : ?>
+                                    <div class="calculator__cta-phone">
+                                        <span class="calculator__cta-phone-label">Or give us a call</span>
+                                        <a href="tel:<?php echo preg_replace('/[^0-9]/', '', get_sub_field('phone')); ?>"><?php echo get_sub_field('phone'); ?></a>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endwhile; ?>
+                    </div>
+                <?php endif; ?>
+                
+
             </div>
         </div>
     </div>

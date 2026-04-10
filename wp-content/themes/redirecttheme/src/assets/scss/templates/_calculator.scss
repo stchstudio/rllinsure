@@ -1,317 +1,376 @@
-.page-template-calculator{
+.page-template-calculator {
 
+  .calculator {
+    padding: 50px 0;
+    background: $beige;
 
-    // ==========================================================================
-// Waiver Calculator — Inputs + Results components
-// ==========================================================================
-// @import "components/waiver-calculator";
+    &__headline {
+      margin-bottom: 50px;
+      h3 {
+        color: $green;
+      }
+    }
 
-// ── Local color vars ──
-$waiver-teal:        #2a7f7f;
-$waiver-teal-dark:   #1e6060;
-$waiver-teal-light:  #e8f4f4;
-$waiver-navy:        #1a2744;
-$waiver-yellow:      #f0c62e;
-$waiver-text:        #2c3e50;
-$waiver-text-muted:  #6b7c8a;
-$waiver-border:      #ddd8d0;
+    // ── CTA ──
+    &__cta {
+      text-align: center;
+      padding: 50px 0;
 
-// ═══════════════════════════════════════════════════════
-// INPUTS PANEL
-// ═══════════════════════════════════════════════════════
-.waiver-calc__inputs {
-  background: #fff;
-  padding: 40px 36px;
-  border: 1px solid $waiver-border;
+      &-title {
+        font-family: 'DM Serif Display', serif;
+        font-size: 28px;
+        color: $dark;
+        font-weight: 400;
+        line-height: 1.4;
+        margin-bottom: 28px;
+      }
 
-  @media (max-width: 500px) {
-    padding: 28px 20px;
+      &-actions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      &-btn {
+        display: inline-block;
+        padding: 14px 32px;
+        background: $green;
+        color: $white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 15px;
+        transition: background 0.2s, transform 0.15s;
+
+        &:hover {
+          background: darken($green, 8%);
+          color: $white;
+          transform: translateY(-1px);
+        }
+      }
+
+      &-phone {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        &-label {
+          color: $gray;
+          font-size: 15px;
+        }
+
+        a {
+          font-size: 20px;
+          font-weight: 700;
+          color: $green;
+          text-decoration: none;
+
+          &:hover {
+            color: darken($green, 8%);
+          }
+        }
+      }
+    }
   }
-}
 
-.waiver-calc__inputs-label {
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1.8px;
-  color: $waiver-text-muted;
-  font-weight: 600;
-  margin-bottom: 28px;
-}
 
-// ── Field ──
-.waiver-calc__field {
-  margin-bottom: 24px;
+  // ═══════════════════════════════════════════════════════
+  // INPUTS PANEL
+  // ═══════════════════════════════════════════════════════
+  .waiver-calc__inputs {
+    background: $white;
+    padding: 40px 36px;
+    border: 1px solid darken($beige, 8%);
 
-  label {
-    display: flex;
+    @media (max-width: 500px) {
+      padding: 28px 20px;
+    }
+  }
+
+  .waiver-calc__inputs-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: $gray;
+    font-weight: 600;
+    margin-bottom: 28px;
+  }
+
+  // ── Field ──
+  .waiver-calc__field {
+    margin-bottom: 24px;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: $dark;
+      margin-bottom: 8px;
+    }
+
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid darken($beige, 8%);
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      color: $blue-light;
+      font-weight: 600;
+      background: lighten($beige, 3%);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      -moz-appearance: textfield;
+
+      &:focus {
+        outline: none;
+        border-color: $blue-light;
+        box-shadow: 0 0 0 3px rgba($blue-light, 0.12);
+      }
+    }
+
+    input[type="number"] {
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238C8F90' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+      cursor: pointer;
+    }
+  }
+
+  .waiver-calc__field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+
+    @media (max-width: 500px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // ── Tooltip ──
+  .waiver-calc__tip {
+    display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    color: $waiver-teal-dark;
-    margin-bottom: 8px;
-  }
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: lighten($blue-light, 45%);
+    color: $blue-light;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: help;
+    position: relative;
 
-  input[type="number"],
-  select {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1.5px solid $waiver-border;
-    border-radius: 8px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    color: $waiver-teal;
-    font-weight: 600;
-    background: #fafaf8;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    -moz-appearance: textfield;
-
-    &:focus {
-      outline: none;
-      border-color: $waiver-teal;
-      box-shadow: 0 0 0 3px rgba($waiver-teal, 0.12);
+    &:hover::after {
+      content: attr(data-tip);
+      position: absolute;
+      bottom: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $blue-dark;
+      color: $white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 400;
+      white-space: nowrap;
+      z-index: 10;
+      pointer-events: none;
     }
   }
 
-  input[type="number"] {
-    &::-webkit-inner-spin-button,
-    &::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
+  // ── Slider ──
+  .waiver-calc__slider-field {
+    margin-bottom: 24px;
+  }
+
+  .waiver-calc__slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    label {
+      font-size: 14px;
+      font-weight: 600;
+      color: $dark;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
   }
 
-  select {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7c8a' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    padding-right: 36px;
-    cursor: pointer;
+  .waiver-calc__slider-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: $blue-light;
   }
-}
 
-.waiver-calc__field-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-
-  @media (max-width: 500px) {
-    grid-template-columns: 1fr;
+  .waiver-calc__range-track {
+    position: relative;
   }
-}
 
-// ── Tooltip ──
-.waiver-calc__tip {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: $waiver-teal-light;
-  color: $waiver-teal;
-  font-size: 10px;
-  font-weight: 700;
-  cursor: help;
-  position: relative;
-
-  &:hover::after {
-    content: attr(data-tip);
+  .waiver-calc__range-fill {
     position: absolute;
-    bottom: 120%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: $waiver-navy;
-    color: #fff;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 400;
-    white-space: nowrap;
-    z-index: 10;
+    top: 50%;
+    left: 0;
+    height: 6px;
+    background: $blue-light;
+    border-radius: 3px;
+    transform: translateY(-50%);
     pointer-events: none;
+    transition: width 0.1s;
   }
-}
 
-// ── Slider ──
-.waiver-calc__slider-field {
-  margin-bottom: 24px;
-}
-
-.waiver-calc__slider-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-
-  label {
-    font-size: 14px;
-    font-weight: 600;
-    color: $waiver-teal-dark;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-}
-
-.waiver-calc__slider-value {
-  font-size: 18px;
-  font-weight: 700;
-  color: $waiver-teal;
-}
-
-.waiver-calc__range-track {
-  position: relative;
-}
-
-.waiver-calc__range-fill {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  height: 6px;
-  background: $waiver-teal;
-  border-radius: 3px;
-  transform: translateY(-50%);
-  pointer-events: none;
-  transition: width 0.1s;
-}
-
-.waiver-calc__inputs input[type="range"] {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 6px;
-  border-radius: 3px;
-  background: $waiver-border;
-  outline: none;
-  cursor: pointer;
-
-  &::-webkit-slider-thumb {
+  .waiver-calc__inputs input[type="range"] {
     -webkit-appearance: none;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: $waiver-teal;
-    border: 3px solid #fff;
-    box-shadow: 0 2px 8px rgba($waiver-teal, 0.35);
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: darken($beige, 8%);
+    outline: none;
     cursor: pointer;
-    transition: transform 0.15s;
 
-    &:hover {
-      transform: scale(1.15);
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: $blue-light;
+      border: 3px solid $white;
+      box-shadow: 0 2px 8px rgba($blue-light, 0.35);
+      cursor: pointer;
+      transition: transform 0.15s;
+
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+
+    &::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: $blue-light;
+      border: 3px solid $white;
+      box-shadow: 0 2px 8px rgba($blue-light, 0.35);
+      cursor: pointer;
     }
   }
 
-  &::-moz-range-thumb {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: $waiver-teal;
-    border: 3px solid #fff;
-    box-shadow: 0 2px 8px rgba($waiver-teal, 0.35);
-    cursor: pointer;
+  // ── Derived rows ──
+  .waiver-calc__derived-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-top: 1px solid darken($beige, 8%);
   }
-}
 
-// ── Derived rows ──
-.waiver-calc__derived-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 0;
-  border-top: 1px solid $waiver-border;
-}
-
-.waiver-calc__derived-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: $waiver-text;
-}
-
-.waiver-calc__derived-value {
-  font-size: 20px;
-  font-weight: 700;
-  color: $waiver-teal;
-}
-
-
-// ═══════════════════════════════════════════════════════
-// RESULTS PANEL
-// ═══════════════════════════════════════════════════════
-.waiver-calc__results {
-  background: $waiver-navy;
-  padding: 40px 36px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-
-  @media (max-width: 500px) {
-    padding: 28px 20px;
+  .waiver-calc__derived-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: $dark;
   }
-}
 
-.waiver-calc__results-inner {
-  position: relative;
-  z-index: 1;
-}
-
-.waiver-calc__revenue-label {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  color: rgba(#fff, 0.55);
-  font-weight: 600;
-  margin-bottom: 4px;
-  text-align: center;
-}
-
-.waiver-calc__revenue {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(36px, 5vw, 54px);
-  color: $waiver-yellow;
-  text-align: center;
-  margin-bottom: 36px;
-  line-height: 1.1;
-  text-shadow: 0 2px 20px rgba($waiver-yellow, 0.25);
-  transition: transform 0.25s ease;
-
-  &.bump {
-    transform: scale(1.04);
+  .waiver-calc__derived-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: $blue-light;
   }
-}
 
-.waiver-calc__result-line {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(#fff, 0.08);
 
-  &:last-child {
-    border-bottom: none;
+  // ═══════════════════════════════════════════════════════
+  // RESULTS PANEL
+  // ═══════════════════════════════════════════════════════
+  .waiver-calc__results {
+    background: $blue-dark;
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 500px) {
+      padding: 28px 20px;
+    }
   }
-}
 
-.waiver-calc__rl-label {
-  font-size: 14px;
-  color: rgba(#fff, 0.7);
-  max-width: 180px;
-}
+  .waiver-calc__results-inner {
+    position: relative;
+    z-index: 1;
+  }
 
-.waiver-calc__rl-sublabel {
-  font-size: 11px;
-  color: rgba(#fff, 0.35);
-  margin-top: 2px;
-}
+  .waiver-calc__revenue-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: rgba($white, 0.55);
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-align: center;
+  }
 
-.waiver-calc__rl-value {
-  font-size: 18px;
-  font-weight: 700;
-  color: #fff;
-  text-align: right;
-}
+  .waiver-calc__revenue {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(36px, 5vw, 54px);
+    color: $yellow;
+    text-align: center;
+    margin-bottom: 36px;
+    line-height: 1.1;
+    text-shadow: 0 2px 20px rgba($yellow, 0.25);
+    transition: transform 0.25s ease;
 
+    &.bump {
+      transform: scale(1.04);
+    }
+  }
+
+  .waiver-calc__result-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba($white, 0.08);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .waiver-calc__rl-label {
+    font-size: 14px;
+    color: rgba($white, 0.7);
+    max-width: 180px;
+  }
+
+  .waiver-calc__rl-sublabel {
+    font-size: 11px;
+    color: rgba($white, 0.35);
+    margin-top: 2px;
+  }
+
+  .waiver-calc__rl-value {
+    font-size: 18px;
+    font-weight: 700;
+    color: $white;
+    text-align: right;
+  }
 
 }
