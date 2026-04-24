@@ -95,7 +95,7 @@ get_header(); ?>
 <?php if ( have_rows('calculator') ) : ?>
     <?php while( have_rows('calculator') ) : the_row(); ?>
         <?php if ( get_sub_field('body') ) : ?>
-            <section class="calculator hide">
+            <section class="calculator">
                 <div class='grid-container'>
                     <div class='grid-x grid-padding-x'>
                         <div class='small-12 large-6 cell'>

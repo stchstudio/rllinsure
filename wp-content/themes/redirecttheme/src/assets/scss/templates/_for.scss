@@ -106,13 +106,22 @@
             
         }
         @include breakpoint(large){
-            padding-top:0;
+            padding-top:25px;
             margin-top: 50px;
         }
         .grid-x{
             align-items: center;
             .calculator__body{
-                margin-bottom: 25px;
+               
+                @include breakpoint(small){
+                     margin-bottom: 50px;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                     margin-bottom: 0px;
+                }
                 h4{
                     color: $yellow;
                 }
@@ -122,7 +131,7 @@
             }
             .calculator__image{
                 text-align: center;
-                margin-top: -25px;
+                margin-top: -50px;
                 img{
                     max-width: 450px;;
                     width: 95%;
