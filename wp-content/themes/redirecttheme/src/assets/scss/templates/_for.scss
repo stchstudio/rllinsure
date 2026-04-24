@@ -97,6 +97,39 @@
             }
         }
     }
+    .calculator{
+        background: $purple;
+        @include breakpoint(small){
+            padding-top: 50px;
+        }
+        @include breakpoint(medium){
+            
+        }
+        @include breakpoint(large){
+            padding-top:0;
+            margin-top: 50px;
+        }
+        .grid-x{
+            align-items: center;
+            .calculator__body{
+                margin-bottom: 25px;
+                h4{
+                    color: $yellow;
+                }
+                p{
+                    color: white;
+                }
+            }
+            .calculator__image{
+                text-align: center;
+                margin-top: -25px;
+                img{
+                    max-width: 450px;;
+                    width: 95%;
+                }
+            }   
+        }
+    }
     .solution{
         padding: 50px 0;
         .border{
