@@ -651,6 +651,9 @@ get_header(); ?>
 
                 </div>
             </div>
+            <div class="small-12 large-8 cell">
+                <p class="reveal-up load-hidden" style="font-size: 10px; padding: 25px 0;">Disclaimer: Calculator results are illustrative estimates only and not guarantees. Actual results may vary due to claims activity, participation, market conditions, and regulatory requirements. Certain states—including CA, NY, NJ, MA, OR, and WA—restrict or prohibit ancillary charges to residents, and projected revenue or savings may not be available in all jurisdictions. RLL’s waiver is not insurance and does not provide financial, legal, or regulatory advice. Users are responsible for compliance with applicable laws.</p>
+            </div>
             <div class="small-12 medium-6 medium-offset-3 cell">
 
                 <?php if ( have_rows('cta') ) : ?>

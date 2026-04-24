@@ -91,6 +91,34 @@ get_header(); ?>
     </section>
 <?php endif; ?>
 
+
+<?php if ( have_rows('calculator') ) : ?>
+    <?php while( have_rows('calculator') ) : the_row(); ?>
+        <?php if ( get_sub_field('body') ) : ?>
+            <section class="calculator hide">
+                <div class='grid-container'>
+                    <div class='grid-x grid-padding-x'>
+                        <div class='small-12 large-6 cell'>
+                            <div class="calculator__body">
+                                <?php echo get_sub_field('body'); ?>
+                            </div>
+                        </div>
+                        <div class='small-12 large-6 cell'>
+                            <?php if ( get_sub_field('image') ) : $image = get_sub_field('image'); ?>
+                                <div class="calculator__image">
+                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"/>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+    <?php endwhile; ?>
+<?php endif; ?>
+
+
+
 <?php if ( get_field('solution') ) : ?>
     <section class="solution">
         <div class='grid-container'>
