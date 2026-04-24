@@ -99,6 +99,7 @@
     }
     .calculator{
         background: $purple;
+        overflow: visible;
         @include breakpoint(small){
             padding-top: 50px;
         }

@@ -99,7 +99,7 @@ get_header(); ?>
                 <div class='grid-container'>
                     <div class='grid-x grid-padding-x'>
                         <div class='small-12 large-6 cell'>
-                            <div class="calculator__body">
+                            <div class="calculator__body reveal-left load-hidden">
                                 <?php echo get_sub_field('body'); ?>
                             </div>
                         </div>
