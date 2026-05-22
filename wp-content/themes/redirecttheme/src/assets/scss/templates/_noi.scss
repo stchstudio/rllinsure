@@ -1,0 +1,71 @@
+.page-template-noi{
+    .site-header, .headline, .animation{
+        background-color: #8B5BA3;
+    }
+    .start-convo-fixed{
+        display: none !important;
+    }
+    .site-header{
+        .login, .fire-navigation, .nav-overlay, .top-bar-right{
+            display: none;
+        }
+    }
+    #lottieLogo{
+        path{
+            fill: white !important;
+        }
+    }
+    .headline{
+        .headline__block{
+            h5{
+                color: white;
+                text-transform: uppercase;
+                line-height: 1.1;
+                margin-bottom: 20px;
+                @include breakpoint(small){
+                    font-size: 24px;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    font-size: 34px;
+                }
+            }
+            h1{
+                color: $yellow;
+                @include breakpoint(small){
+                    font-size: 70px;
+                }
+                @include breakpoint(medium){
+                    font-size: 80px;
+                }
+                @include breakpoint(large){
+                    font-size: 120px;
+                }
+            }
+            p{
+                color: white;
+                strong{
+                    color: $yellow;
+                }
+                @include breakpoint(small){
+                    font-size: 20px;
+                }
+                @include breakpoint(medium){
+                    
+                }
+                @include breakpoint(large){
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    footer{
+        position: relative;
+        z-index: 1;
+        #menu-footer-primary, #menu-footer-secondary{
+            display: none;
+        }
+    }
+}
