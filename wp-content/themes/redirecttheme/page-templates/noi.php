@@ -4,6 +4,14 @@ Template Name: NOI
 */
 get_header(); ?>
 
+<div class="money">
+    <div class="money__left">
+        <img src="https://rllinsure.com/wp-content/uploads/2026/05/money_left.png" alt="">
+    </div>
+    <div class="money__right">
+        <img src="https://rllinsure.com/wp-content/uploads/2026/05/moneyright.png" alt="">
+    </div>
+</div>
 
 <?php if ( get_field('headline') ) : ?>
     <section class="headline">
