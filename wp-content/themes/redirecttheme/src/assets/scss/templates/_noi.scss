@@ -65,6 +65,7 @@
         padding: 50px 0;
         background-color: #8B5BA3;
         position: relative;
+        overflow: visible;
         &__body{
             margin-bottom: 25px;
             background-color: #A287B8;
@@ -95,7 +96,7 @@
             .gform_body{
 
                 input{
-                    height: 50px;
+                    height: 60px;
                     background: $dark;
                     color: $beige;
                     font-weight: 500;
@@ -116,10 +117,10 @@
         }
         .foreground{
             position: absolute;
-            left: 50px;
+            left: 75px;
             bottom: -150px;
             z-index: 2;
-            width: 200px;
+            width: 280px;
             @include breakpoint(small){
                 display: none;
             }
