@@ -20,10 +20,9 @@ get_header(); ?>
 <?php endif; ?>
 
 <?php if ( get_field('form') ) : ?>
-    
-    <section class="form">
+    <section class="noi-form">
         <div class='grid-container'>
-            <div class='grid-x'>
+            <div class='grid-x grid-padding-x'>
                 <div class='small-12 large-8 cell'>
                     <div class="form__body">
                         <?php echo get_field('form'); ?>
