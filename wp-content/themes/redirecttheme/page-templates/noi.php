@@ -26,7 +26,7 @@ get_header(); ?>
             <div class='grid-x'>
                 <div class='small-12 large-8 cell'>
                     <div class="form__body">
-
+                        <?php echo get_field('form'); ?>
                     </div>
                 </div>
                 <div class='small-12 large-4 cell'>
