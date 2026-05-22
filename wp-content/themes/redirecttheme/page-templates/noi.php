@@ -37,6 +37,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
+        <img class="foreground" src="https://rllinsure.com/wp-content/uploads/2026/05/RLLmoneywoman.png" />
     </section>
 <?php endif; ?>
 
